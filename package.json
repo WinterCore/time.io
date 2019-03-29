@@ -1,0 +1,49 @@
+{
+  "name": "time.io",
+  "version": "0.1.0",
+  "description": "Time management for projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env ENVIRONMENT=development nodemon --watch index.min.js index.min.js",
+    "start": "node index.min.js",
+    "build": "webpack --progress --mode production",
+    "build:watch": "webpack --watch --progress --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinterCore/time.io.git"
+  },
+  "keywords": [
+    "time",
+    "project",
+    "management"
+  ],
+  "author": "WinterCore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WinterCore/time.io/issues"
+  },
+  "homepage": "https://github.com/WinterCore/time.io#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11",
+    "ramda": "^0.26.1",
+    "table": "^5.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.3",
+    "nodemon": "^1.18.10",
+    "source-map-support": "^0.5.11",
+    "webpack": "^4.29.6",
+    "webpack-build-notifier": "^0.1.31",
+    "webpack-cli": "^3.3.0"
+  }
+}
