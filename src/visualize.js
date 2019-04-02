@@ -1,7 +1,7 @@
 import chalk  from "chalk";
 import * as R from "ramda";
 
-import { numbers, colon }       from "./config";
+import { NUMBERS, COLON }       from "./config";
 import { withHighlight, purge } from "./log";
 
 
@@ -11,7 +11,7 @@ export const centerX = (str, columns = process.stdout.columns) => {
 	return `${padding}${str}${padding}`;
 };
 
-const replaceCharactersWithAsciiArt = _ => (_ === ":" ? colon : numbers[+_]);
+const replaceCharactersWithAsciiArt = _ => (_ === ":" ? COLON : NUMBERS[+_]);
 const HEIGHT = 6;
 
 const paddingY = height => Math.floor((process.stdout.rows - height) / 2);

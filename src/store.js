@@ -1,9 +1,9 @@
 import fs   from "fs-extra";
 import path from "path";
 
-import { dataPath } from "./config";
+import { DATA_PATH } from "./config";
 
-const dataDir = path.join(dataPath, "projects");
+const dataDir = path.join(DATA_PATH, "projects");
 
 export const read = name =>
 	fs.readFile(path.join(dataDir, `${name}.json`), "utf-8")

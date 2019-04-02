@@ -1,8 +1,10 @@
-import timer    from "../timer";
+import { read } from "../store";
 import * as Log from "../log";
 
-export default async function start(project) {
-    if (!project) {
+import Parser from "./parser";
+
+export default async function info(project, args) {
+	if (!project) {
         throw new Error(
             Log.withHighlight(
                 "You need to select a project first.\nUse %s to switch to a project.",
@@ -10,6 +12,8 @@ export default async function start(project) {
             )
         );
     }
-    timer.currentProject = project;
-    timer.start();
+
+	const data = await read(project);
+
+    return Parser(data, args, true);
 };

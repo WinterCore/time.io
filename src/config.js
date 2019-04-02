@@ -1,7 +1,7 @@
 import path from "path";
 
-export const dataPath = path.resolve(process.env.APPDATA, "..", "local", "time-io");
-export const numbers  = [
+export const DATA_PATH = path.resolve(process.env.APPDATA, "..", "local", "time-io");
+export const NUMBERS  = [
 	"  ___  \n / _ \\ \n| | | |\n| | | |\n| |_| |\n \\___/ ", // 0
 	" __ \n/_ |\n | |\n | |\n | |\n |_|", // 1
 	" ___  \n|__ \\ \n   ) |\n  / / \n / /_ \n|____|", // 2
@@ -14,9 +14,9 @@ export const numbers  = [
 	"  ___  \n / _ \\ \n| (_) |\n \\__, |\n   / / \n  /_/  " // 9
 ];
 
-export const colon = "   \n _ \n(_)\n _ \n(_)\n   ";
+export const COLON = "   \n _ \n(_)\n _ \n(_)\n   ";
 
-export const days = [
+export const DAYS = [
 	"Sunday",
 	"Monday",
 	"Tuesday",
@@ -24,4 +24,18 @@ export const days = [
 	"Thursday",
 	"Friday",
 	"Saturday"
+];
+
+export const MONTHS = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"December"
 ];

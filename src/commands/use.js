@@ -1,9 +1,12 @@
 import { exists }        from "../store";
 import { withHighlight } from "../log";
 
+import Timer    from "../timer";
+
 export default async function use(name) {
     try {
         await exists(name);
+        Timer.reset();
     } catch (e) {
         throw new Error(
             withHighlight(

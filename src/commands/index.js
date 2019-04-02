@@ -12,7 +12,7 @@ import info   from "./info";
 import timer  from "../timer";
 
 
-let selectedProject = null;
+let selectedProject = "english";
 
 async function director(str) {
     const cmd     = str.trim().toLowerCase().split(" ");
@@ -88,7 +88,8 @@ export default function commandReader() {
 	process.stdin.on("data", str => {
         director(str.toString())
             .catch(err => {
-                Log.error(err.message)
+                Log.error(err.message);
+                if (err.stack) console.error(err);
                 Log.enterCommand();
             });
     });
