@@ -12,7 +12,7 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 * ```use <name>``` Switch to a project with the specified name
 * ```info``` Prints info about a project (a project must be selected with ```use```)
 * ```start``` Start the timer (You can press enter to stop it after starting it) (a project must be selected with ```use```)
-* ```info <formatter>``` Prints data about the currently selected project, See [formatters](#) below.
+* ```info <formatter>``` Prints data about the currently selected project, See [formatters](#formatters) below.
 * ```clear``` Clears the terminal screen
 * ```help``` Prints all available commands
 <!-- * ```rangeinfo <formatter> <start> <finish>``` The same as ```info``` but limits the data to the specified range. (COMING SOON) -->
