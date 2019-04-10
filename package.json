@@ -28,10 +28,10 @@
   "bin": {
     "time-io": "./bin/time-io.js"
   },
-  "files" : {
+  "files" : [
     "dist",
     "bin"
-  },
+  ],
   "homepage": "https://github.com/WinterCore/time.io#readme",
   "dependencies": {
     "chalk": "^2.4.2",
