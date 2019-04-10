@@ -79,6 +79,10 @@ async function director(str) {
         case "s":
             await start(selectedProject);
             break;
+        case "exit":
+            Log.purge();
+            process.exit();
+            break;
         default:
             Log.error(Log.withHighlight("The command you entered doesn't exist.\nUse %s to list available commands.", "help"));
             Log.enterCommandNewLine();

@@ -46,6 +46,7 @@ export const printHelp = () => {
 	log(chalk.cyan("info <formatter>\tPrints data about the currently selected project, See formatter types below."));
 	log(chalk.cyan("start\t\t\tStars the timer on the currently selected project."));
 	log(chalk.cyan("clear\t\t\tClears the terminal screen."));
+	log(chalk.cyan("exit\t\t\tExits."));
 	log();
 	log(chalk.yellow("Formatter types"));
 	log(withHighlight("\t%s Outputs time data grouped by days", "day"));

@@ -17,6 +17,9 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 * ```info <formatter>``` Prints data about the currently selected project, See [formatters](#formatters) below.
 * ```clear``` Clears the terminal screen
 * ```help``` Prints all available commands
+* ```exit``` Exits
+
+
 <!-- * ```rangeinfo <formatter> <start> <finish>``` The same as ```info``` but limits the data to the specified range. (COMING SOON) -->
 ## Command Aliases
 | Command      | Aliases                           |
