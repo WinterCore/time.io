@@ -1,9 +1,11 @@
 # time.io
 Time.IO is supposed to be a tool to help you keep track of how much time you spend on doing something (coding, learning, etc.) 🤔.
 
-## Installation & Usage
+## Installation
 ```npm i time.io```
 
+## Usage
+```time-io```
 
 ## Available Commands
 * ```create <name>``` Creates a project with the specified name
@@ -17,15 +19,15 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 * ```help``` Prints all available commands
 <!-- * ```rangeinfo <formatter> <start> <finish>``` The same as ```info``` but limits the data to the specified range. (COMING SOON) -->
 ## Command Aliases
-| Command | Alias |
-| --- | --- | --- | --- |
-| ```create``` | ```c``` |
+| Command      | Alias                             |
+| ---          | ---                               |
+| ```create``` | ```c```                           |
 | ```delete``` | ```remove```, ```rm```, ```del``` |
-| ```list```   | ```ls```, ```l``` |
-| ```use```    | ```u``` |
-| ```start```  | ```s``` |
-| ```clear```  | ```cls``` |
-| ```help```   | ```h``` |
+| ```list```   | ```ls```, ```l```                 |
+| ```use```    | ```u```                           |
+| ```start```  | ```s```                           |
+| ```clear```  | ```cls```                         |
+| ```help```   | ```h```                           |
 
 ## <a name="formatters"></a> Formatters
 * ```day``` Groups the output data by days
