@@ -2,7 +2,7 @@
 Time.IO is supposed to be a tool to help you keep track of how much time you spend on doing something (coding, learning, etc.) 🤔.
 
 ## Installation
-```npm i time.io```
+```npm i -g time.io```
 
 ## Usage
 ```time-io```
