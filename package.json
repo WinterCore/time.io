@@ -1,6 +1,6 @@
 {
   "name": "time.io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Time management for projects",
   "main": "index.js",
   "scripts": {
