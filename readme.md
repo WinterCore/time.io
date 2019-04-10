@@ -29,5 +29,13 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 
 ## <a name="formatters"></a> Formatters
 * ```day``` Groups the output data by days
+
+![time.io](examples/day.jpg)
+
 * ```month``` Groups the output data by months
+
+![time.io](examples/month.jpg)
+
 * ```year``` Groups the output data by years
+
+![time.io](examples/year.jpg)
