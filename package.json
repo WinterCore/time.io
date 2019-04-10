@@ -4,10 +4,11 @@
   "description": "Time management for projects",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env ENVIRONMENT=development nodemon --watch index.min.js index.min.js",
+    "dev": "cross-env ENVIRONMENT=development nodemon --watch dist/index.min.js dist/index.min.js",
     "start": "node index.min.js",
     "build": "webpack --progress --mode production",
-    "build:watch": "webpack --watch --progress --mode development"
+    "build:watch": "webpack --watch --progress --mode development",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,14 @@
   "bugs": {
     "url": "https://github.com/WinterCore/time.io/issues"
   },
+  "preferGlobal": true,
+  "bin": {
+    "time-io": "./bin/time-io.js"
+  },
   "homepage": "https://github.com/WinterCore/time.io#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "fs-extra": "^7.0.1",
-    "lodash": "^4.17.11",
     "ramda": "^0.26.1",
     "table": "^5.2.3"
   },

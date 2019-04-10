@@ -4,12 +4,12 @@ if (process.env.ENVIRONMENT === "development") {
 
 import fs               from "fs-extra";
 import commandReader    from "./commands";
-import { DATA_PATH }    from "./config";
+import { PROJECTS_PATH }    from "./config";
 import { printWelcome } from "./log";
 
 printWelcome();
 
-fs.ensureDir(DATA_PATH)
+fs.ensureDir(PROJECTS_PATH)
     .then(() => {
         commandReader();
     }).catch(console.log);

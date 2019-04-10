@@ -1,6 +1,7 @@
 import path from "path";
 
-export const DATA_PATH = path.resolve(process.env.APPDATA, "..", "local", "time-io");
+export const DATA_PATH = path.join(process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE, "time-io");
+export const PROJECTS_PATH = path.join(DATA_PATH, "projects");
 export const NUMBERS  = [
 	"  ___  \n / _ \\ \n| | | |\n| | | |\n| |_| |\n \\___/ ", // 0
 	" __ \n/_ |\n | |\n | |\n | |\n |_|", // 1

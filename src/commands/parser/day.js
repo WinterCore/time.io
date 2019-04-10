@@ -8,7 +8,7 @@ import * as Helpers from "../../helpers";
 const groupByDay = arr => R.reduce((acc, { start, finish }) => {
 	const startDate  = new Date(start);
 	const finishDate = new Date(finish);
-	const dateString = startDate.toLocaleDateString();
+	const dateString = `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`;
 
 	if (!acc[dateString]) acc[dateString] = { durations : [], total : 0 };
 	acc[dateString].durations.push({ start : startDate, finish : finishDate, total : finish - start });

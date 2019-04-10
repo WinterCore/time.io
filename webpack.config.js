@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
 		entry   : "./src/index.js",
 		target  : "node",
@@ -12,7 +14,7 @@ module.exports = {
 		]
 	},
 	output : {
-    path     : __dirname,
+    path     : path.join(__dirname, "dist"),
     filename : "index.min.js"
 	}
 };

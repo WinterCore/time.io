@@ -2,13 +2,14 @@ import visualize from "./visualize";
 
 import { secondsToHis } from "./helpers";
 
-import { append, read } from "./store";
+import { append, read, rewrite } from "./store";
 
 class Timer {
     startTime      = null;
     secondsPassed  = 0;
     isRunning      = false;
     intervalId     = 0;
+    saveIntervalId = 0;
     currentProject = null;
 
     start() {
@@ -25,6 +26,8 @@ class Timer {
             }
             visualize(secondsToHis(this.secondsPassed));
         }, 1000);
+
+        this.saveIntervalId = setInterval(this.save.bind(this), 1000); // save every 5 mins
     }
 
     spansAcross2Days() {
@@ -34,10 +37,27 @@ class Timer {
     }    
 
     async stop() {
-        await append(this.currentProject, { start : this.startTime, finish : Date.now() });
+        this.save();
         this.isRunning     = false;
         this.secondsPassed = 0;
         clearInterval(this.intervalId);
+        clearInterval(this.saveIntervalId);
+    }
+
+    save() {
+        read(this.currentProject)
+            .then((data) => {
+                let l            = data.length;
+                let lastDuration = data[l - 1];
+                if (lastDuration && lastDuration.start === this.startTime) {
+                    lastDuration.finish = Date.now();
+                    rewrite(this.currentProject, data)
+                        .catch(console.log);
+                } else {
+                    append(this.currentProject, { start : this.startTime, finish : Date.now() })
+                        .catch(console.log);
+                }
+            }).catch(console.log);
     }
 
     reset() {

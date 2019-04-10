@@ -39,12 +39,18 @@ export const purge = () => process.stdout.write("\x1b[2J");
 
 export const printHelp = () => {
 	log();
-	log(chalk.cyan("create <name>\tCreates a new project with the specified name."));
-	log(chalk.cyan("delete <name>\tDeletes a project matching the specified name."));
-	log(chalk.cyan("list <name>\tLists All projects."));
-	log(chalk.cyan("use <name>\tSwitches to a project with the specified name."));
-	log(chalk.cyan("info\t\tPrints data about the currently selected project."));
-	log(chalk.cyan("start\t\tStars the timer on the currently selected project."));
+	log(chalk.cyan("create <name>\t\tCreates a new project with the specified name."));
+	log(chalk.cyan("delete <name>\t\tDeletes a project matching the specified name."));
+	log(chalk.cyan("list <name>\t\tLists All projects."));
+	log(chalk.cyan("use <name>\t\tSwitches to a project with the specified name."));
+	log(chalk.cyan("info <formatter>\tPrints data about the currently selected project, See formatter types below."));
+	log(chalk.cyan("start\t\t\tStars the timer on the currently selected project."));
+	log(chalk.cyan("clear\t\t\tClears the terminal screen."));
+	log();
+	log(chalk.yellow("Formatter types"));
+	log(withHighlight("\t%s Outputs time data grouped by days", "day"));
+	log(withHighlight("\t%s Outputs time data groupe by months", "month"));
+	log(withHighlight("\t%s Outputs time data grouped dby years", "year"));
 	log();
 };
 

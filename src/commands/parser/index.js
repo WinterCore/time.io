@@ -5,21 +5,23 @@ import monthParser, { stringify as stringifyMonthData }   from "./month";
 import yearParser, { stringify as stringifyYearData }     from "./year";
 import rangeParser, { stringify as stringifyRangeParser } from "./range";
 
+import TimeIOError from "../../timeio-error";
+
 const types = {
 	day   : dayParser,
 	month : monthParser,
-	year  : yearParser,
-	range : rangeParser
+	year  : yearParser
+	// range : rangeParser
 };
 
 const stringifiers = {
 	day         : stringifyDayData,
 	month       : stringifyMonthData,
-	yearParser  : stringifyYearData,
+	year        : stringifyYearData,
 	rangeParser : stringifyRangeParser
 };
 
-const defaultType = "day";
+const defaultType = "month";
 
 export {
     types,
@@ -32,9 +34,9 @@ export default function Parser(data, [type = defaultType, ...args], stringified 
 		if (stringified) return stringifiers[type](parsedData);
 		else return parsedData;
 	}
-	throw new Error(
+	throw new TimeIOError(
 		Log.withHighlight(
-			`Invalid parser type %s, Please use %s for available parser types.`,
+			`Invalid formatter type %s, Please use %s for available formatter types.`,
 			type,
 			"help"
 		)

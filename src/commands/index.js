@@ -11,8 +11,10 @@ import info   from "./info";
 
 import timer  from "../timer";
 
+import TimeIOError from "../timeio-error";
 
-let selectedProject = "english";
+
+let selectedProject = null;
 
 async function director(str) {
     const cmd     = str.trim().toLowerCase().split(" ");
@@ -22,7 +24,7 @@ async function director(str) {
     // Check if the timer is running and stop it
     if (timer.isRunning) {
         Log.purge();
-        await stop(selectedProject);
+        stop(selectedProject);
         Log.printWelcome();
         return;
     }
@@ -35,12 +37,12 @@ async function director(str) {
             Log.enterCommand();
             break;
         case "clear":
-        case "cl":
+        case "cls":
             Log.purge();
             Log.enterCommandNewLine();
             break;
         case "create":
-        case "cr":
+        case "c":
             await create(args);
             Log.success();
             Log.enterCommand();
@@ -88,8 +90,8 @@ export default function commandReader() {
 	process.stdin.on("data", str => {
         director(str.toString())
             .catch(err => {
-                Log.error(err.message);
-                if (err.stack) console.error(err);
+                if (err instanceof TimeIOError) Log.error(err.message);
+                else console.error(err.stack);
                 Log.enterCommand();
             });
     });
