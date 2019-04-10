@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "cross-env ENVIRONMENT=development nodemon --watch dist/index.min.js dist/index.min.js",
     "start": "node index.min.js",
-    "build": "node_modules/.bin/webpack --progress --mode production",
-    "build:watch": "node_modules/.bin/webpack --watch --progress --mode development",
-    "postinstall": "npm run build"
+    "build": "webpack --progress --mode production",
+    "build:watch": "webpack --watch --progress --mode development",
+    "postinstall": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
