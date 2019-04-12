@@ -27,7 +27,7 @@ class Timer {
             visualize(secondsToHis(this.secondsPassed));
         }, 1000);
 
-        this.saveIntervalId = setInterval(this.save.bind(this), 1000); // save every 5 mins
+        this.saveIntervalId = setInterval(this.save.bind(this), 1000 * 60 * 3); // save every 5 mins
     }
 
     spansAcross2Days() {
