@@ -33,6 +33,7 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 | ```start```  | ```s```                           |
 | ```clear```  | ```cls```                         |
 | ```help```   | ```h```                           |
+| ```info```   | ```i```                           |
 
 ## <a name="formatters"></a> Formatters
 * ```day``` Groups the output data by days
