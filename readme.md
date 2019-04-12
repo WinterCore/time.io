@@ -1,6 +1,8 @@
 # time.io
 Time.IO is supposed to be a tool to help you keep track of how much time you spend on doing something (coding, learning, etc.) 🤔.
 
+![time.io](examples/timer.jpg)
+
 ## Installation
 ```npm i -g time.io```
 
@@ -44,3 +46,12 @@ Time.IO is supposed to be a tool to help you keep track of how much time you spe
 * ```year``` Groups the output data by years
 
 ![time.io](examples/year.jpg)
+
+
+## Notes
+* The timer saves your data every 3 minutes and when you stop it
+* Do not run multiple timers on the same project as it will create a message in the data file
+
+Don't judge the half-assed functional code I'm still learning functional programming and it's pretty hard 😥
+
+Thanks
